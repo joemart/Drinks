@@ -1,9 +1,8 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 6rem;
   min-height: 100vh;
 }
 
@@ -227,3 +226,30 @@
     transform: rotate(0deg);
   }
 }
+
+/* my edits */
+
+.drinkRow{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 10px 100px;
+  align-items: center;
+}
+
+.drinkItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 30%;
+}
+
+.buttons{
+  width:200px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
