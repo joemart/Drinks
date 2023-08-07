@@ -50,7 +50,6 @@ export  const Home : NextPage<Beverages> = function (
     setSlice(e=>e-1)
   }
 
-
   return (
     <>
       <Head>
@@ -67,15 +66,17 @@ export  const Home : NextPage<Beverages> = function (
           <br />
 
           {/* Add a link */}
-            
-           <Image 
-          unoptimized
-          loader={imageLoader}
-          src={r.strDrinkThumb}
-          width={200}
-          height={200}
-          alt={r.strDrink}
-          />
+            <Link href={`http://localhost:3000/drinks/${r.idDrink}`}>
+              <Image 
+              unoptimized
+              loader={imageLoader}
+              src={r.strDrinkThumb}
+              width={200}
+              height={200}
+              alt={r.strDrink}
+              />
+            </Link>
+           
           </div>
          
          )
@@ -83,9 +84,8 @@ export  const Home : NextPage<Beverages> = function (
         </div>
         
         <div className={styles.buttons}>
-          
-          <button onClick={handleSliceSub}> Previous </button>
-          <button onClick={handleSliceAdd}> Next </button>
+          <button disabled={slice == 0 ? true : false} onClick={handleSliceSub}> Previous </button>
+          <button disabled={ Math.round( res.length/pageSizeArray) == slice ? true : false} onClick={handleSliceAdd}> Next </button>
         </div>
         
       </main>

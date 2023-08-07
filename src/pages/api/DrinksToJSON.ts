@@ -2,6 +2,9 @@ import fs from "fs";
 import type { NextApiRequest, NextApiResponse } from "next";
 import type{Drink} from "@/models/DrinksType"
 
+//This API function will create a file depending if it exists or not.
+//The file will be a json file with all the drinks
+
 export default async function GET ( req:NextApiRequest, res: NextApiResponse ){
 
     const path = "./src/Data/drinks.json"

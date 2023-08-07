@@ -1,18 +1,35 @@
+.cardParent{
+    height: 100vh;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
 .card{
     display:flex;
     flex-direction: column;
+    align-items: center;
+    width:400px;
+    height:auto;   
 }
 
+.imgClass{
+    border-radius: 10px;
+}
 
-@media (max-width:320px) {
-    .card{
-        width:100%;
+.buttonDrink{
+    width: 110px;
+    height:40px;
+    border-radius: 10px;
+    word-wrap:break-word;
+}
+
+@media (max-width:400px) {
+    .imgClass{
+        width:200px;
+        height:200px;
     }
     
 }
-
-
-
-
-
-
