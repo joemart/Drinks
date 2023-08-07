@@ -13,7 +13,8 @@ export default async function GET ( req:NextApiRequest, res: NextApiResponse ){
     {
         console.log("file exists")
     }
-    else{
+    else
+    {
         const allDrinks: Drink[] = await fetch("http://localhost:3000/api/allDrinks").then(r=>r.json())
         const lastDrink = allDrinks[allDrinks.length-1]
         const allDrinksMinusLast = allDrinks.slice(0,-1)
@@ -28,9 +29,5 @@ export default async function GET ( req:NextApiRequest, res: NextApiResponse ){
         file.write("]")
         file.end()
     }
-  
-
-
-
     res.status(200).send({Message:"Success"})
 }

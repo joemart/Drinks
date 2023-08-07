@@ -17,9 +17,6 @@ export const getStaticProps: GetStaticProps = async (context) =>{
   const nonalcoholicBString = "nonalcoholicB"
   const alcoh : Alcohol = await fetch(URL + alcoholicBString).then(r=>r.json())
   const NONalcoh : Alcohol = await fetch(URL + nonalcoholicBString).then(r=>r.json())
-
-  
-
   return {
     props: {
       alcoh
@@ -65,9 +62,9 @@ export  const Home : NextPage<Beverages> = function (
           {r.strDrink}
           <br />
 
-          {/* Add a link */}
+       
             <Link href={`http://localhost:3000/drinks/${r.idDrink}`}>
-              <Image 
+              <Image
               unoptimized
               loader={imageLoader}
               src={r.strDrinkThumb}
